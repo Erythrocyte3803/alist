@@ -186,7 +186,7 @@ func getSizeFromUrl(url string) (int64, error) {
 	}
 	size, err := strconv.ParseInt(res.Header().Get("Content-Length"), 10, 64)
 	if err != nil {
-		size, err := strconv.ParseInt(res.Header().Get("Accept-Length"), 9, 64)
+		size, err := strconv.ParseInt(res.Header().Get("Accept-Length"), 10, 64)
 		if err != nil {
 			return 0, err
 		}
